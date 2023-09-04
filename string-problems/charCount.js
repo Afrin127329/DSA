@@ -15,15 +15,15 @@ function charCount(string) {
     let charCountedList = {};
     for (let i = 0; i < string.length; i++){
         let char = string[i].toLowerCase();
-        // console.log(charCountedList[char])
         if (!charCountedList[char]) {
             charCountedList[char] = 1;
         } else {
             charCountedList[char]++;
         }
     }
+    console.log(charCountedList)
     return charCountedList;
 }
 
 const result = charCount(str);
-console.log(result)
+// console.log(result)
