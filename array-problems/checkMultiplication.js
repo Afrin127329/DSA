@@ -9,15 +9,17 @@
  * 3. create variable to find out and save the index matches with second array or not
  * 4. Remove each element from the second array if the condition matches
  * 5. Return boolean
+ * 
+ * Problem: Big O notation check
  */
 
 function checkMultiplication(arr1, arr2) {
-    if (arr1.length !== arr2.length) {
+    if (arr1.length !== arr2.length) { 
         return false;
     }
 
-    for (let i = 0; i < arr1.length; i++){
-        let index = arr2.indexOf(arr1[i] ** 2);
+    for (let i = 0; i < arr1.length; i++){ // n times comparison
+        let index = arr2.indexOf(arr1[i] ** 2); // n times comparison
         // console.log(index);
         if (index === -1) {
             return false;
@@ -30,3 +32,5 @@ function checkMultiplication(arr1, arr2) {
 
 const result = checkMultiplication([2, 3, 6], [9, 4, 36])
 console.log(result)
+
+// Time complexity O(n2);
