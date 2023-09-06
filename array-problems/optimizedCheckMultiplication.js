@@ -42,6 +42,7 @@ function checkMultiplication(arr1, arr2) {
         if (!(key ** 2) in sequenceCounter2) {
             return false;
         }
+        // checking map values in both map
         if (sequenceCounter2[key ** 2] !== sequenceCounter1[key]) {
             return false;
         }
@@ -53,4 +54,5 @@ const result = checkMultiplication([2, 3, 6], [9, 4, 36]);
 console.log(result)
 
 // Time complexity = n + n + n = 3n or O(n);
+
 
