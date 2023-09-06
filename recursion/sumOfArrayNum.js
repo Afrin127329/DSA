@@ -29,10 +29,28 @@ function sumOfArrayNumbers(array) {
     // Recursion 2nd Solution
     if (array.length === 0) return 0;
     let rest = array.slice(1);
-    // console.log(rest);
-    // console.log(array[0])
 
     return array[0] + sumOfArrayNumbers(rest);
 }
 
-console.log(sumOfArrayNumbers([3,5,4,3,8]))
+console.log(sumOfArrayNumbers([3, 5, 4, 3, 8]))
+
+// Time complexity: O(n2)
+// Space complexity: O(n)
+
+// Refactored code with lowest time complexity
+
+function sumOfArrayNumbers2(array) {
+    return helperSum(array, 0);
+}
+
+function helperSum(arr, index) {
+    if (arr.length === index) return 0;
+
+    return arr[index] + helperSum(arr, index + 1);
+}
+
+console.log(sumOfArrayNumbers2([3, 5, 4, 3, 8]))
+
+// Time complexity: O(n);
+// Space complexity: O(n);
