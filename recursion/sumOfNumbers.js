@@ -1,7 +1,8 @@
 /**
  * Problem: Given a number, find the sum of all the numbers till 0
  * Soln: 
- * 1. 
+ * 1. For Loop: Iterate over the array and save the number to a created sum variable and return it at last
+ * 2. Recursion: Create a check to stop the recursive call of the function and add a return statement with a condition to decrement the argument
  */
 
 function sumOfNumber(n) {
