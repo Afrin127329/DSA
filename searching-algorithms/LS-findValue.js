@@ -14,4 +14,6 @@ function findValue(array, inputVal) {
     return -1;
 }
 
-console.log(findValue([4,3,6,3,7], 3))
+console.log(findValue([4, 3, 6, 3, 7], 3))
+
+// Time complexity: O(n);
