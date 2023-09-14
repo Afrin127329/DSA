@@ -9,13 +9,14 @@
  */
 
 function numbersSort(array) {
-    for (let i = 0; i < array.length - 1; i++){
-        for (let j = i + 1; j < array.length; j++){
-            // console.log(array[i], array[j])
+    for (let i = 0; i < array.length; i++){
+        for (let j = 0; j < array.length - 1; j++){
             let temp = array[j];
-            if (array[i] > array[j]) {
-                array[i] = array[j]
-                temp = array[i];
+            console.log(array, array[j], array[j + 1])
+            if (array[j] > array[j + 1]) {
+                // swaping to the right
+                array[j] = array[j + 1];
+                array[j + 1] = temp;
             }
         }
     }
@@ -24,5 +25,8 @@ function numbersSort(array) {
 
 const unsortedArray = [64, 34, 25, 12, 22, 11, 90];
 console.log(numbersSort(unsortedArray));
+
+// Time complexity: O(n2);
+// Space complexity: O(n);
 
 
