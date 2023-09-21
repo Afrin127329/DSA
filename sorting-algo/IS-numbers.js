@@ -9,17 +9,17 @@
  */
 
 function numbersSort(array) {
-    for (let i = 1; i < array.length; i++){
+    for (let i = 1; i < array.length; i++) {
         for (let j = i; j > 0; j--){
             // console.log(i, j);
-            // let temp = array[j];
             if (array[j] < array[j - 1]) {
-                // array[j] = array[j - 1];
-                // array[j - 1] = temp;
-                // Alternative swaping
-                [array[j], array[j - 1]] = [array[j - 1], array[j]];
-            } else {
-                break;
+                // first swaping technique
+                let temp = array[j];
+                array[j] = array[j - 1];
+                array[j - 1] = temp;
+
+                // second swaping technique
+                // [array[j], array[j - 1]] = [array[j - 1], array[j]];
             }
         }
     }
