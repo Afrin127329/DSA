@@ -11,7 +11,7 @@ function twoSum(array, target) {
     for (let i = 0; i < array.length; i++){
         let remaining = target - array[i];
         for (let j = i + 1; j < array.length; j++){
-            if(remaining = array[j]) return [i, j]
+            if(remaining === array[j]) return [i, j]
         }
     }
     return false;
