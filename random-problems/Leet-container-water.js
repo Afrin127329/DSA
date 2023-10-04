@@ -1,5 +1,5 @@
 /**
- * 
+ * Time complexity: O(n^2)
  */
 
 function maxArea(heights) {
