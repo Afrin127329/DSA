@@ -9,11 +9,9 @@ function maxArea(heights) {
 
     while (firstPointer < lastPointer) {
         let height = Math.min(heights[firstPointer], heights[lastPointer]);
-        // console.log(height);
         let width = lastPointer - firstPointer;
 
         let currentWater = height * width;
-
         totalWater = Math.max(totalWater, currentWater);
 
         if (heights[firstPointer] <= heights[lastPointer]) {
@@ -22,7 +20,6 @@ function maxArea(heights) {
             lastPointer--;
         }
     }
-
 
     return totalWater;
 }
